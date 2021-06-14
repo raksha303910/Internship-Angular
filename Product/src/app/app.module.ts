@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AllProductsComponent } from './all-products/all-products.component';
-import { StarPipe } from './star.pipe';
+import { StringpipePipe } from './stringpipe.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AllProductsComponent,
-    StarPipe,
+    StringpipePipe,
  
   ],
   imports: [

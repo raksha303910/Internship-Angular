@@ -1,12 +1,17 @@
 <table *ngFor = "let item of getAllProducts()">
-    <tr> 
+  <div>  <tr> 
         <td><img src="{{item.imageName}}"width="100" height="100"/></td>
-        <td>{{item.productName}}</td>
+        <td><caption>{{item.productName}}</caption></td>
         <td>{{item.productCost | currency:'INR':'symbol-narrow':'4.2-2'}}</td>
-        <td>{{item.productDescription}}</td>
+        <td><caption>{{item.productDescription| stringpipe}}</caption></td>
         <td>{{item.rating}}</td>
-        <td><button>Add to cart</button></td>
-
+        <td >
+            <div> 
+                <img  *ngFor = "let n of getRating(item.rating)" src = "assets/productsImage/star.png"  width="10" height="10"/>
+            </div>
+        </td>
+        <td> <button (click)="addToCart()">Add to Cart</button></td>
+        <td> <button (click) = "doShare(item.productName)">Share</button></td>
         
-    </tr>
+    </tr></div>
 </table>
