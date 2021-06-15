@@ -21,15 +21,15 @@ export class AllProductsComponent implements OnInit {
   {
     return this.__productService.getAllProducts();
   }
-    addToCart()
-    {
-      this.unitsInCart++;
-      console.log(this.unitsInCart);
-    }
-    doShare(name:String){
+  addToCart()
+  {
+    this.unitsInCart++;
+     console.log(this.unitsInCart);
+  }
+  doShare(name:String){
       console.log(name + " is shared");
     }
-   getRating(n:number): Array<number>{
+  getRating(n:number): Array<number>{
     return Array(n)
    }
     
